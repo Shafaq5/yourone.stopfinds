@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your One-Stop Finds | Jewelry • Bags • Accessories & More</title>
+<meta name="description" content="Your One-Stop Finds — jewelry, bags, beauty, accessories and more. Finding the best things, just for you.">
+<style>
+:root{--pink:#d86b87;--dark:#282329;--cream:#fff8f5;--gold:#b88a45;--soft:#f8e6ea}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream)}
+a{text-decoration:none;color:inherit}.top{background:#282329;color:white;text-align:center;padding:9px;font-size:13px;letter-spacing:.5px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,248,245,.96);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:12px 6%;border-bottom:1px solid #f0dfe2}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1px}.logo img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.links{display:flex;gap:24px;font-size:14px;font-weight:600}.links a:hover{color:var(--pink)}
+.hero{padding:65px 6% 50px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff8f5,#f7e2e7)}
+.hero h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,70px);line-height:1.02;margin:10px 0}.hero h1 span{color:var(--pink)}
+.hero p{font-size:18px;line-height:1.7;max-width:580px;color:#665d62}.btn{display:inline-block;background:var(--pink);color:#fff;padding:14px 22px;border-radius:30px;font-weight:700;margin:10px 8px 0 0}.btn.alt{background:#fff;color:var(--dark);border:1px solid #e6cdd3}
+.hero-card{background:#fff;border-radius:28px;padding:15px;box-shadow:0 20px 55px rgba(55,35,42,.12)}.hero-card img{width:100%;height:430px;object-fit:cover;border-radius:20px}
+section{padding:65px 6%}.heading{text-align:center;margin-bottom:34px}.heading h2{font-family:Georgia,serif;font-size:38px;margin:0 0 8px}.heading p{color:#776e73}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(50,30,40,.08);border:1px solid #f1e5e7}.card img{width:100%;height:260px;object-fit:cover}.card-body{padding:18px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--pink);font-weight:700}.card h3{margin:7px 0;font-size:20px}.card p{font-size:14px;line-height:1.6;color:#71686d}.shop{background:var(--soft);text-align:center}.shop-box{max-width:850px;margin:auto;background:#fff;padding:38px;border-radius:28px}.shop-box h2{font-family:Georgia,serif;font-size:38px;margin:0 0 12px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.about img{width:100%;max-width:360px;border-radius:50%;display:block;margin:auto}.about h2{font-family:Georgia,serif;font-size:40px}.about p{line-height:1.8;color:#6d6469}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.feature{background:#fff;border-radius:18px;padding:20px;text-align:center}.feature b{display:block;margin-bottom:6px}
+footer{background:#282329;color:#fff;text-align:center;padding:35px 6%}footer img{width:60px;border-radius:50%;margin-bottom:10px}footer p{color:#d9cfd2;font-size:14px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.about{grid-template-columns:1fr}.hero-card img{height:330px}}
+@media(max-width:600px){.links{display:none}.grid,.features{grid-template-columns:1fr}.hero{padding-top:40px}section{padding:45px 5%}.card img{height:300px}}
+</style>
+</head>
+<body>
+<div class="top">✨ New finds weekly • DM us on Instagram to order • Pakistan</div>
+
+<nav>
+  <a class="logo" href="#home"><img src="images/logo.png" alt="Your One-Stop Finds logo"><span>YOURONE.STOPFINDS</span></a>
+  <div class="links">
+    <a href="#products">Products</a><a href="#about">About</a><a href="#order">How to Order</a>
+    <a href="https://www.instagram.com/yourone.stopfinds/" target="_blank">Instagram ↗</a>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="tag">YOUR ONE-STOP SHOPPING DESTINATION</div>
+    <h1>We find the <span>best things,</span> just for you. ✨</h1>
+    <p>Discover cute, stylish and useful finds — from jewelry and mini bags to beauty products, bottles and everyday accessories.</p>
+    <a class="btn" href="#products">Shop Our Finds</a>
+    <a class="btn alt" href="https://www.instagram.com/yourone.stopfinds/" target="_blank">DM on Instagram</a>
+  </div>
+  <div class="hero-card"><img src="images/mini-bags.jpg" alt="Mini bags"></div>
+</section>
+
+<section id="products">
+  <div class="heading"><h2>Our Latest Finds</h2><p>Little luxuries and useful things we think you'll love.</p></div>
+  <div class="grid">
+    <article class="card"><img src="images/mini-bags.jpg" alt="Mini Forever Young bags"><div class="card-body"><div class="tag">Bags</div><h3>Mini Forever Young Bags</h3><p>Compact, cute and perfect for everyday essentials. Available in beautiful pastel shades.</p></div></article>
+    <article class="card"><img src="images/lipstick.jpg" alt="18-color capsule lipstick"><div class="card-body"><div class="tag">Beauty</div><h3>18-Color Capsule Lipstick</h3><p>18 silky-smooth matte shades, from everyday tones to bold statement colors.</p></div></article>
+    <article class="card"><img src="images/water-bottles.jpg" alt="Ice Cream water bottles"><div class="card-body"><div class="tag">Lifestyle</div><h3>Ice Cream Water Bottles</h3><p>Fun, colorful bottles with a built-in straw and easy-grip handle.</p></div></article>
+    <article class="card"><img src="images/watch-bracelet.jpg" alt="Purple gemstone watch and bracelet set"><div class="card-body"><div class="tag">Jewelry</div><h3>Purple Gemstone Watch Set</h3><p>A statement watch paired with a delicate matching bracelet for an elegant look.</p></div></article>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div><img src="images/logo.png" alt="Your One-Stop Finds"></div>
+  <div>
+    <div class="tag">ABOUT US</div>
+    <h2>Curated with love. 💕</h2>
+    <p>Your One-Stop Finds is a growing online shop for people who love discovering beautiful, practical and trending products without searching everywhere.</p>
+    <p><b>Jewelry • Bags • Beauty • Accessories • Lifestyle & More</b></p>
+    <div class="features"><div class="feature">✨<b>Curated Finds</b>Products we think you'll love.</div><div class="feature">🛍️<b>New Finds</b>Fresh products regularly.</div><div class="feature">💌<b>Easy Ordering</b>Simply DM us to order.</div></div>
+  </div>
+</section>
+
+<section id="order" class="shop">
+  <div class="shop-box">
+    <div class="tag">READY TO SHOP?</div>
+    <h2>Find your next favorite. 🛍️</h2>
+    <p>Message us on Instagram with the product name or screenshot. We'll reply with availability, price and ordering details.</p>
+    <a class="btn" href="https://www.instagram.com/yourone.stopfinds/" target="_blank">Message @yourone.stopfinds</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="images/logo.png" alt="Logo">
+  <div><b>YOURONE.STOPFINDS</b></div>
+  <p>Jewelry • Bags • Accessories & More</p>
+  <p>Finding the best things, just for you. 💕</p>
+</footer>
+</body>
+</html>

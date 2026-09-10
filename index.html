@@ -3,126 +3,1215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Your One-Stop Finds | Jewelry • Bags • Accessories & More</title>
+
 <meta name="description" content="Your One-Stop Finds — jewelry, bags, beauty, accessories and more. Finding the best things, just for you.">
+
 <style>
-:root{--pink:#d86b87;--dark:#282329;--cream:#fff8f5;--gold:#b88a45;--soft:#f8e6ea}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream)}
-a{text-decoration:none;color:inherit}.top{background:#282329;color:white;text-align:center;padding:9px;font-size:13px;letter-spacing:.5px}
-nav{position:sticky;top:0;z-index:10;background:rgba(255,248,245,.96);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:12px 6%;border-bottom:1px solid #f0dfe2}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1px}.logo img{width:48px;height:48px;border-radius:50%;object-fit:cover}
-.links{display:flex;gap:24px;font-size:14px;font-weight:600}.links a:hover{color:var(--pink)}
-.hero{padding:65px 6% 50px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff8f5,#f7e2e7)}
-.hero h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,70px);line-height:1.02;margin:10px 0}.hero h1 span{color:var(--pink)}
-.hero p{font-size:18px;line-height:1.7;max-width:580px;color:#665d62}.btn{display:inline-block;background:var(--pink);color:#fff;padding:14px 22px;border-radius:30px;font-weight:700;margin:10px 8px 0 0}.btn.alt{background:#fff;color:var(--dark);border:1px solid #e6cdd3}
-.hero-card{background:#fff;border-radius:28px;padding:15px;box-shadow:0 20px 55px rgba(55,35,42,.12)}.hero-card img{width:100%;height:430px;object-fit:cover;border-radius:20px}
-section{padding:65px 6%}.heading{text-align:center;margin-bottom:34px}.heading h2{font-family:Georgia,serif;font-size:38px;margin:0 0 8px}.heading p{color:#776e73}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(50,30,40,.08);border:1px solid #f1e5e7}.card img{width:100%;height:260px;object-fit:cover}.card-body{padding:18px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--pink);font-weight:700}.card h3{margin:7px 0;font-size:20px}.card p{font-size:14px;line-height:1.6;color:#71686d}.shop{background:var(--soft);text-align:center}.shop-box{max-width:850px;margin:auto;background:#fff;padding:38px;border-radius:28px}.shop-box h2{font-family:Georgia,serif;font-size:38px;margin:0 0 12px}
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.about img{width:100%;max-width:360px;border-radius:50%;display:block;margin:auto}.about h2{font-family:Georgia,serif;font-size:40px}.about p{line-height:1.8;color:#6d6469}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.feature{background:#fff;border-radius:18px;padding:20px;text-align:center}.feature b{display:block;margin-bottom:6px}
-footer{background:#282329;color:#fff;text-align:center;padding:35px 6%}footer img{width:60px;border-radius:50%;margin-bottom:10px}footer p{color:#d9cfd2;font-size:14px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.about{grid-template-columns:1fr}.hero-card img{height:330px}}
-@media(max-width:600px){.links{display:none}.grid,.features{grid-template-columns:1fr}.hero{padding-top:40px}section{padding:45px 5%}.card img{height:300px}}
+:root{
+  --pink:#d86b87;
+  --dark:#282329;
+  --cream:#fff8f5;
+  --gold:#b88a45;
+  --soft:#f8e6ea;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--dark);
+  background:var(--cream)
+}
+
+a{text-decoration:none;color:inherit}
+
+.top{
+  background:#282329;
+  color:white;
+  text-align:center;
+  padding:9px;
+  font-size:13px;
+  letter-spacing:.5px
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,248,245,.96);
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 6%;
+  border-bottom:1px solid #f0dfe2
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  letter-spacing:1px
+}
+
+.logo img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover
+}
+
+.links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  font-size:14px;
+  font-weight:600
+}
+
+.links a:hover{color:var(--pink)}
+
+.cart-button{
+  border:none;
+  background:var(--pink);
+  color:white;
+  padding:11px 17px;
+  border-radius:25px;
+  font-weight:700;
+  cursor:pointer;
+  font-size:14px
+}
+
+.cart-button:hover{
+  opacity:.9
+}
+
+.hero{
+  padding:65px 6% 50px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:40px;
+  align-items:center;
+  background:linear-gradient(135deg,#fff8f5,#f7e2e7)
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(40px,6vw,70px);
+  line-height:1.02;
+  margin:10px 0
+}
+
+.hero h1 span{color:var(--pink)}
+
+.hero p{
+  font-size:18px;
+  line-height:1.7;
+  max-width:580px;
+  color:#665d62
+}
+
+.btn{
+  display:inline-block;
+  background:var(--pink);
+  color:#fff;
+  padding:14px 22px;
+  border-radius:30px;
+  font-weight:700;
+  margin:10px 8px 0 0
+}
+
+.btn.alt{
+  background:#fff;
+  color:var(--dark);
+  border:1px solid #e6cdd3
+}
+
+.hero-card{
+  background:#fff;
+  border-radius:28px;
+  padding:15px;
+  box-shadow:0 20px 55px rgba(55,35,42,.12)
+}
+
+.hero-card img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  border-radius:20px
+}
+
+section{padding:65px 6%}
+
+.heading{
+  text-align:center;
+  margin-bottom:34px
+}
+
+.heading h2{
+  font-family:Georgia,serif;
+  font-size:38px;
+  margin:0 0 8px
+}
+
+.heading p{color:#776e73}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(50,30,40,.08);
+  border:1px solid #f1e5e7
+}
+
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover
+}
+
+.card-body{padding:18px}
+
+.tag{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  color:var(--pink);
+  font-weight:700
+}
+
+.card h3{
+  margin:7px 0;
+  font-size:20px
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.6;
+  color:#71686d
+}
+
+.price{
+  font-size:20px;
+  font-weight:800;
+  color:var(--dark);
+  margin:14px 0
+}
+
+.cart-add{
+  width:100%;
+  border:none;
+  background:var(--pink);
+  color:white;
+  padding:13px;
+  border-radius:25px;
+  font-weight:700;
+  cursor:pointer;
+  font-size:15px
+}
+
+.cart-add:hover{
+  opacity:.9
+}
+
+.shop{
+  background:var(--soft);
+  text-align:center
+}
+
+.shop-box{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  padding:38px;
+  border-radius:28px
+}
+
+.shop-box h2{
+  font-family:Georgia,serif;
+  font-size:38px;
+  margin:0 0 12px
+}
+
+.about{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:40px;
+  align-items:center
+}
+
+.about img{
+  width:100%;
+  max-width:360px;
+  border-radius:50%;
+  display:block;
+  margin:auto
+}
+
+.about h2{
+  font-family:Georgia,serif;
+  font-size:40px
+}
+
+.about p{
+  line-height:1.8;
+  color:#6d6469
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:25px
+}
+
+.feature{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  text-align:center
+}
+
+.feature b{
+  display:block;
+  margin-bottom:6px
+}
+
+footer{
+  background:#282329;
+  color:#fff;
+  text-align:center;
+  padding:35px 6%
+}
+
+footer img{
+  width:60px;
+  border-radius:50%;
+  margin-bottom:10px
+}
+
+footer p{
+  color:#d9cfd2;
+  font-size:14px
+}
+
+/* CART */
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  z-index:99;
+  display:none
+}
+
+.cart-overlay.show{display:block}
+
+.cart-panel{
+  position:fixed;
+  top:0;
+  right:-430px;
+  width:400px;
+  max-width:92%;
+  height:100vh;
+  background:white;
+  z-index:100;
+  box-shadow:-10px 0 40px rgba(0,0,0,.2);
+  transition:right .3s ease;
+  display:flex;
+  flex-direction:column
+}
+
+.cart-panel.open{right:0}
+
+.cart-header{
+  padding:20px;
+  border-bottom:1px solid #eee;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+
+.cart-header h2{
+  margin:0;
+  font-family:Georgia,serif
+}
+
+.close-cart{
+  border:none;
+  background:#f5e5e9;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px
+}
+
+.cart-items{
+  flex:1;
+  overflow-y:auto;
+  padding:15px
+}
+
+.empty-cart{
+  text-align:center;
+  padding:50px 20px;
+  color:#777
+}
+
+.cart-item{
+  border-bottom:1px solid #eee;
+  padding:15px 0
+}
+
+.cart-item-name{
+  font-weight:700;
+  margin-bottom:6px
+}
+
+.cart-item-price{
+  color:var(--pink);
+  font-weight:700
+}
+
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:10px
+}
+
+.quantity button{
+  border:none;
+  background:#f5e5e9;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold
+}
+
+.remove{
+  border:none;
+  background:none;
+  color:#b44;
+  cursor:pointer;
+  margin-left:auto
+}
+
+.cart-footer{
+  padding:20px;
+  border-top:1px solid #eee;
+  background:#fff
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:15px
+}
+
+.checkout{
+  width:100%;
+  border:none;
+  background:var(--pink);
+  color:white;
+  padding:15px;
+  border-radius:28px;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer
+}
+
+.checkout:hover{
+  opacity:.9
+}
+
+.clear-cart{
+  width:100%;
+  border:none;
+  background:#f5e5e9;
+  color:var(--dark);
+  padding:11px;
+  border-radius:25px;
+  margin-top:8px;
+  cursor:pointer;
+  font-weight:700
+}
+
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .hero-card img{height:330px}
+}
+
+@media(max-width:600px){
+  .links{display:none}
+
+  .grid,
+  .features{
+    grid-template-columns:1fr
+  }
+
+  .hero{
+    padding-top:40px
+  }
+
+  section{
+    padding:45px 5%
+  }
+
+  .card img{
+    height:300px
+  }
+
+  .logo span{
+    font-size:13px
+  }
+
+  .cart-panel{
+    width:100%;
+    max-width:100%
+  }
+}
 </style>
 </head>
+
 <body>
-<div class="top">✨ New finds weekly • DM us on Instagram to order • Pakistan</div>
+
+<div class="top">
+  ✨ New finds weekly • DM us on Instagram to order • Pakistan
+</div>
 
 <nav>
-  <a class="logo" href="#home"><img src="logo.png" alt="Your One-Stop Finds logo"><span>YOURONE.STOPFINDS</span></a>
+
+  <a class="logo" href="#home">
+    <img src="logo.png" alt="Your One-Stop Finds logo">
+    <span>YOURONE.STOPFINDS</span>
+  </a>
+
   <div class="links">
-    <a href="#products">Products</a><a href="#about">About</a><a href="#order">How to Order</a>
-    <a href="https://www.instagram.com/yourone.stopfinds/" target="_blank">Instagram ↗</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#order">How to Order</a>
+
+    <a href="https://www.instagram.com/yourone.stopfinds/" target="_blank">
+      Instagram ↗
+    </a>
   </div>
+
+  <button class="cart-button" onclick="openCart()">
+    🛒 Cart (<span id="cartCount">0</span>)
+  </button>
+
 </nav>
 
 <main id="home">
+
 <section class="hero">
+
   <div>
-    <div class="tag">YOUR ONE-STOP SHOPPING DESTINATION</div>
-    <h1>We find the <span>best things,</span> just for you. ✨</h1>
-    <p>Discover cute, stylish and useful finds — from jewelry and mini bags to beauty products, bottles and everyday accessories.</p>
-    <a class="btn" href="#products">Shop Our Finds</a>
-    <a class="btn alt" href="https://www.instagram.com/yourone.stopfinds/" target="_blank">DM on Instagram</a>
+
+    <div class="tag">
+      YOUR ONE-STOP SHOPPING DESTINATION
+    </div>
+
+    <h1>
+      We find the <span>best things,</span> just for you. ✨
+    </h1>
+
+    <p>
+      Discover cute, stylish and useful finds — from jewelry and mini bags
+      to beauty products, bottles and everyday accessories.
+    </p>
+
+    <a class="btn" href="#products">
+      Shop Our Finds
+    </a>
+
+    <a class="btn alt"
+       href="https://www.instagram.com/yourone.stopfinds/"
+       target="_blank">
+      DM on Instagram
+    </a>
+
   </div>
-  <div class="hero-card"><img src="mini-bags.jpg" alt="Mini bags"></div>
+
+  <div class="hero-card">
+    <img src="mini-bags.jpg" alt="Mini bags">
+  </div>
+
 </section>
+
 
 <section id="products">
-  <div class="heading"><h2>Our Latest Finds</h2><p>Little luxuries and useful things we think you'll love.</p></div>
+
+  <div class="heading">
+    <h2>Our Latest Finds</h2>
+    <p>Little luxuries and useful things we think you'll love.</p>
+  </div>
+
   <div class="grid">
-    <article class="card"><img src="mini-bags.jpg" alt="Mini Forever Young bags"><div class="card-body"><div class="tag">Bags</div><h3>Mini Forever Young Bags</h3><p>Compact, cute and perfect for everyday essentials. Available in beautiful pastel shades.</p></div></article>
-    <article class="card"><img src="lipstick.jpg" alt="18-color capsule lipstick"><div class="card-body"><div class="tag">Beauty</div><h3>18-Color Capsule Lipstick</h3><p>18 silky-smooth matte shades, from everyday tones to bold statement colors.</p></div></article>
-    <article class="card"><img src="water-bottles.jpg" alt="Ice Cream water bottles"><div class="card-body"><div class="tag">Lifestyle</div><h3>Ice Cream Water Bottles</h3><p>Fun, colorful bottles with a built-in straw and easy-grip handle.</p></div></article>
-    <article class="card"><img src="watch-bracelet.jpg" alt="Purple gemstone watch and bracelet set"><div class="card-body"><div class="tag">Jewelry</div><h3>Purple Gemstone Watch Set</h3><p>A statement watch paired with a delicate matching bracelet for an elegant look.</p></div></article>
+
+
+    <!-- PRODUCT 1 -->
     <article class="card">
-  <img src="royal-crystal-jewelry-set.jpg" alt="Royal Crystal Bridal Jewelry Set">
-  <div class="card-body">
-    <div class="tag">Jewelry</div>
-    <h3>Royal Crystal Bridal Jewelry Set</h3>
-    <p>Elegant and sparkling jewelry set designed to add a beautiful royal touch to your special look. ✨</p>
-    <p>
-      💎 Elegant crystal design<br>
-      ✨ Beautiful sparkling details<br>
-      👑 Royal & luxurious look<br>
-      🌸 Perfect for weddings & special occasions<br>
-      🎁 Perfect for gifting
-    </p>
-    <p>
-      📩 <b>DM @yourone.stopfinds to order</b><br>
-      🚚 Delivery available<br>
-      💖 Limited stock — order yours now!
-    </p>
-  </div>
+
+      <img src="mini-bags.jpg"
+           alt="Mini Forever Young bags">
+
+      <div class="card-body">
+
+        <div class="tag">Bags</div>
+
+        <h3>Mini Forever Young Bags</h3>
+
+        <p>
+          Compact, cute and perfect for everyday essentials.
+          Available in beautiful pastel shades.
+        </p>
+
+        <div class="price">
+          Rs. 1,200
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('Mini Forever Young Bags',1200)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
     </article>
+
+
+    <!-- PRODUCT 2 -->
     <article class="card">
-  <img src="bracelet-set.jpg" alt="Elegant Gold-Plated Bracelet Set">
-  <div class="card-body">
-    <div class="tag">Jewelry</div>
-    <h3> Elegant Bracelet Set </h3>
-    <p>Add a touch of elegance to your everyday look with our beautiful gold-plated bracelet set. 💫</p>
-    <p>
-      Stylish & elegant design<br>
-      Sparkling crystal details<br>
-       Perfect for everyday & special occasions<br>
-      Perfect for gifting
-    </p>
-    <p>
-     <b>DM us to order</b><br>
-      Delivery available<br>
-    Limited stock — order yours now!
-    </p>
-  </div>
+
+      <img src="lipstick.jpg"
+           alt="18-color capsule lipstick">
+
+      <div class="card-body">
+
+        <div class="tag">Beauty</div>
+
+        <h3>18-Color Capsule Lipstick</h3>
+
+        <p>
+          18 silky-smooth matte shades, from everyday tones
+          to bold statement colors.
+        </p>
+
+        <div class="price">
+          Rs. 1,800
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('18-Color Capsule Lipstick',1800)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
     </article>
+
+
+    <!-- PRODUCT 3 -->
+    <article class="card">
+
+      <img src="water-bottles.jpg"
+           alt="Ice Cream water bottles">
+
+      <div class="card-body">
+
+        <div class="tag">Lifestyle</div>
+
+        <h3>Ice Cream Water Bottles</h3>
+
+        <p>
+          Fun, colorful bottles with a built-in straw
+          and easy-grip handle.
+        </p>
+
+        <div class="price">
+          Rs. 1,800
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('Ice Cream Water Bottles',1800)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUCT 4 -->
+    <article class="card">
+
+      <img src="watch-bracelet.jpg"
+           alt="Purple gemstone watch and bracelet set">
+
+      <div class="card-body">
+
+        <div class="tag">Jewelry</div>
+
+        <h3>Purple Gemstone Watch Set</h3>
+
+        <p>
+          A statement watch paired with a delicate matching
+          bracelet for an elegant look.
+        </p>
+
+        <div class="price">
+          Rs. 2,200
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('Purple Gemstone Watch Set',2200)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUCT 5 -->
+    <article class="card">
+
+      <img src="bracelet-set.jpg"
+           alt="Elegant Gold-Plated Bracelet Set">
+
+      <div class="card-body">
+
+        <div class="tag">Jewelry</div>
+
+        <h3>Elegant Bracelet Set</h3>
+
+        <p>
+          Add a touch of elegance to your everyday look
+          with our beautiful gold-plated bracelet set. 💫
+        </p>
+
+        <p>
+          💎 Stylish & elegant design<br>
+          ✨ Sparkling crystal details<br>
+          🌸 Perfect for everyday & special occasions<br>
+          🎁 Perfect for gifting
+        </p>
+
+        <div class="price">
+          Rs. 500 each
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('Elegant Bracelet Set',500)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUCT 6 -->
+    <article class="card">
+
+      <img src="royal-crystal-jewelry-set.jpg"
+           alt="Royal Crystal Bridal Jewelry Set">
+
+      <div class="card-body">
+
+        <div class="tag">Jewelry</div>
+
+        <h3>Royal Crystal Bridal Jewelry Set</h3>
+
+        <p>
+          Elegant and sparkling jewelry set designed to add
+          a beautiful royal touch to your special look. ✨
+        </p>
+
+        <p>
+          💎 Elegant crystal design<br>
+          ✨ Beautiful sparkling details<br>
+          👑 Royal & luxurious look<br>
+          🌸 Perfect for weddings & special occasions<br>
+          🎁 Perfect for gifting
+        </p>
+
+        <div class="price">
+          Rs. 1,600
+        </div>
+
+        <button class="cart-add"
+          onclick="addToCart('Royal Crystal Bridal Jewelry Set',1600)">
+          🛒 Add to Cart
+        </button>
+
+      </div>
+
+    </article>
+
+
   </div>
+
 </section>
+
 
 <section id="about" class="about">
-  <div><img src="logo.png" alt="Your One-Stop Finds"></div>
+
   <div>
-    <div class="tag">ABOUT US</div>
-    <h2>Curated with love. 💕</h2>
-    <p>Your One-Stop Finds is a growing online shop for people who love discovering beautiful, practical and trending products without searching everywhere.</p>
-    <p><b>Jewelry • Bags • Beauty • Accessories • Lifestyle & More</b></p>
-    <div class="features"><div class="feature">✨<b>Curated Finds</b>Products we think you'll love.</div><div class="feature">🛍️<b>New Finds</b>Fresh products regularly.</div><div class="feature">💌<b>Easy Ordering</b>Simply DM us to order.</div></div>
+    <img src="logo.png" alt="Your One-Stop Finds">
   </div>
+
+  <div>
+
+    <div class="tag">ABOUT US</div>
+
+    <h2>Curated with love. 💕</h2>
+
+    <p>
+      Your One-Stop Finds is a growing online shop for people who love
+      discovering beautiful, practical and trending products without
+      searching everywhere.
+    </p>
+
+    <p>
+      <b>
+        Jewelry • Bags • Beauty • Accessories • Lifestyle & More
+      </b>
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        ✨
+        <b>Curated Finds</b>
+        Products we think you'll love.
+      </div>
+
+      <div class="feature">
+        🛍️
+        <b>New Finds</b>
+        Fresh products regularly.
+      </div>
+
+      <div class="feature">
+        💌
+        <b>Easy Ordering</b>
+        Simply add to cart and order.
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
 
 <section id="order" class="shop">
+
   <div class="shop-box">
-    <div class="tag">READY TO SHOP?</div>
-    <h2>Find your next favorite. 🛍️</h2>
-    <p>Message us on Instagram with the product name or screenshot. We'll reply with availability, price and ordering details.</p>
-    <a class="btn" href="https://www.instagram.com/yourone.stopfinds/" target="_blank">Message @yourone.stopfinds</a>
+
+    <div class="tag">
+      READY TO SHOP?
+    </div>
+
+    <h2>
+      Find your next favorite. 🛍️
+    </h2>
+
+    <p>
+      Add your favorite products to the cart. When you're ready,
+      click "Order on Instagram" and send us your order details.
+    </p>
+
+    <a class="btn"
+       href="https://www.instagram.com/yourone.stopfinds/"
+       target="_blank">
+      Message @yourone.stopfinds
+    </a>
+
   </div>
+
 </section>
+
 </main>
 
+
 <footer>
+
   <img src="logo.png" alt="Logo">
-  <div><b>YOURONE.STOPFINDS</b></div>
-  <p>Jewelry • Bags • Accessories & More</p>
-  <p>Finding the best things, just for you. 💕</p>
+
+  <div>
+    <b>YOURONE.STOPFINDS</b>
+  </div>
+
+  <p>
+    Jewelry • Bags • Accessories & More
+  </p>
+
+  <p>
+    Finding the best things, just for you. 💕
+  </p>
+
 </footer>
+
+
+<!-- CART OVERLAY -->
+<div id="cartOverlay"
+     class="cart-overlay"
+     onclick="closeCart()">
+</div>
+
+
+<!-- CART PANEL -->
+<aside id="cartPanel"
+       class="cart-panel">
+
+  <div class="cart-header">
+
+    <h2>🛒 Your Cart</h2>
+
+    <button class="close-cart"
+            onclick="closeCart()">
+      ✕
+    </button>
+
+  </div>
+
+
+  <div id="cartItems"
+       class="cart-items">
+  </div>
+
+
+  <div class="cart-footer">
+
+    <div class="cart-total">
+
+      <span>Total</span>
+
+      <span>
+        Rs. <span id="cartTotal">0</span>
+      </span>
+
+    </div>
+
+    <button class="checkout"
+            onclick="orderOnInstagram()">
+      📩 Order on Instagram
+    </button>
+
+    <button class="clear-cart"
+            onclick="clearCart()">
+      Clear Cart
+    </button>
+
+  </div>
+
+</aside>
+
+
+<script>
+
+let cart = JSON.parse(
+  localStorage.getItem("yourOneStopFindsCart") || "[]"
+);
+
+
+/* ADD PRODUCT TO CART */
+function addToCart(name, price){
+
+  const existing = cart.find(
+    item => item.name === name
+  );
+
+  if(existing){
+
+    existing.quantity += 1;
+
+  }else{
+
+    cart.push({
+      name:name,
+      price:price,
+      quantity:1
+    });
+
+  }
+
+  saveCart();
+
+  openCart();
+}
+
+
+/* SAVE CART */
+function saveCart(){
+
+  localStorage.setItem(
+    "yourOneStopFindsCart",
+    JSON.stringify(cart)
+  );
+
+  renderCart();
+}
+
+
+/* SHOW CART */
+function renderCart(){
+
+  const cartItems =
+    document.getElementById("cartItems");
+
+  const cartCount =
+    document.getElementById("cartCount");
+
+  const cartTotal =
+    document.getElementById("cartTotal");
+
+
+  let totalItems = 0;
+  let totalPrice = 0;
+
+
+  cart.forEach(item => {
+
+    totalItems += item.quantity;
+
+    totalPrice +=
+      item.price * item.quantity;
+
+  });
+
+
+  cartCount.textContent = totalItems;
+
+  cartTotal.textContent =
+    totalPrice.toLocaleString();
+
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML = `
+      <div class="empty-cart">
+        🛍️<br><br>
+        Your cart is empty.<br>
+        Add something you love!
+      </div>
+    `;
+
+    return;
+  }
+
+
+  cartItems.innerHTML =
+    cart.map((item,index) => `
+
+      <div class="cart-item">
+
+        <div class="cart-item-name">
+          ${item.name}
+        </div>
+
+        <div class="cart-item-price">
+          Rs. ${(item.price * item.quantity).toLocaleString()}
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQuantity(${index},-1)">
+            −
+          </button>
+
+          <strong>
+            ${item.quantity}
+          </strong>
+
+          <button onclick="changeQuantity(${index},1)">
+            +
+          </button>
+
+          <button class="remove"
+                  onclick="removeFromCart(${index})">
+            🗑️ Remove
+          </button>
+
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* CHANGE QUANTITY */
+function changeQuantity(index,change){
+
+  cart[index].quantity += change;
+
+  if(cart[index].quantity <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+  saveCart();
+}
+
+
+/* REMOVE PRODUCT */
+function removeFromCart(index){
+
+  cart.splice(index,1);
+
+  saveCart();
+}
+
+
+/* CLEAR CART */
+function clearCart(){
+
+  cart = [];
+
+  saveCart();
+}
+
+
+/* OPEN CART */
+function openCart(){
+
+  document
+    .getElementById("cartPanel")
+    .classList.add("open");
+
+  document
+    .getElementById("cartOverlay")
+    .classList.add("show");
+
+}
+
+
+/* CLOSE CART */
+function closeCart(){
+
+  document
+    .getElementById("cartPanel")
+    .classList.remove("open");
+
+  document
+    .getElementById("cartOverlay")
+    .classList.remove("show");
+
+}
+
+
+/* ORDER ON INSTAGRAM */
+function orderOnInstagram(){
+
+  if(cart.length === 0){
+
+    alert(
+      "Your cart is empty. Please add a product first."
+    );
+
+    return;
+  }
+
+
+  let message =
+    "Hi @yourone.stopfinds! 👋%0A%0AI would like to order:%0A%0A";
+
+
+  let total = 0;
+
+
+  cart.forEach(item => {
+
+    const itemTotal =
+      item.price * item.quantity;
+
+    total += itemTotal;
+
+    message +=
+      "• " +
+      item.name +
+      " × " +
+      item.quantity +
+      " = Rs. " +
+      itemTotal.toLocaleString() +
+      "%0A";
+
+  });
+
+
+  message +=
+    "%0A💰 Total: Rs. " +
+    total.toLocaleString();
+
+
+  const plainMessage =
+    cart.map(item =>
+      item.name +
+      " × " +
+      item.quantity +
+      " = Rs. " +
+      (item.price * item.quantity).toLocaleString()
+    ).join("\n")
+    +
+    "\n\nTotal: Rs. " +
+    total.toLocaleString();
+
+
+  if(navigator.clipboard){
+
+    navigator.clipboard
+      .writeText(
+        "Hi @yourone.stopfinds! 👋\n\n" +
+        "I would like to order:\n\n" +
+        plainMessage
+      )
+      .catch(() => {});
+
+  }
+
+
+  alert(
+    "Your order details have been copied! 📋\n\n" +
+    "Instagram will open next.\n" +
+    "Paste the details into your DM."
+  );
+
+
+  window.open(
+    "https://www.instagram.com/yourone.stopfinds/",
+    "_blank"
+  );
+
+}
+
+
+/* LOAD CART */
+renderCart();
+
+</script>
+
 </body>
-</html>
+    </html>

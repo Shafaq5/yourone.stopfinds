@@ -487,6 +487,82 @@ footer p{
     max-width:100%
   }
 }
+  /* BEDSheet Slider */
+
+.bedsheet-slider{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#fff;
+}
+
+.bedsheet-slides{
+  display:flex;
+  transition:transform .4s ease;
+  touch-action:pan-y;
+}
+
+.bedsheet-slide{
+  min-width:100%;
+  flex-shrink:0;
+}
+
+.bedsheet-slide img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+
+.bedsheet-prev,
+.bedsheet-next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.85);
+  font-size:24px;
+  cursor:pointer;
+  z-index:2;
+}
+
+.bedsheet-prev{
+  left:10px;
+}
+
+.bedsheet-next{
+  right:10px;
+}
+
+.bedsheet-dots{
+  position:absolute;
+  bottom:12px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:7px;
+}
+
+.bedsheet-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:rgba(255,255,255,.7);
+  cursor:pointer;
+}
+
+.bedsheet-dot.active{
+  background:var(--pink);
+}
+
+@media(max-width:600px){
+  .bedsheet-slide img{
+    height:300px;
+  }
+}
 </style>
 </head>
 
@@ -841,6 +917,84 @@ footer p{
 
     <button class="cart-add"
       onclick="addToCart('Bovis Star Button Wallet + Cardholder',1200)">
+      🛒 Add to Cart
+    </button>
+
+  </div>
+
+</article>
+    <!-- PREMIUM BEDSHEET -->
+<article class="card">
+
+  <div class="bedsheet-slider">
+
+    <div class="bedsheet-slides" id="bedsheetSlides">
+
+      <div class="bedsheet-slide">
+        <img src="bedsheet-1.jpg" alt="Premium Bedsheet Design 1">
+      </div>
+
+      <div class="bedsheet-slide">
+        <img src="bedsheet-2.jpg" alt="Premium Bedsheet Design 2">
+      </div>
+
+      <div class="bedsheet-slide">
+        <img src="bedsheet-3.jpg" alt="Premium Bedsheet Design 3">
+      </div>
+
+      <div class="bedsheet-slide">
+        <img src="bedsheet-4.jpg" alt="Premium Bedsheet Design 4">
+      </div>
+
+      <div class="bedsheet-slide">
+        <img src="bedsheet-5.jpg" alt="Premium Bedsheet Design 5">
+      </div>
+
+    </div>
+
+    <button class="bedsheet-prev" onclick="bedsheetMove(-1)">‹</button>
+    <button class="bedsheet-next" onclick="bedsheetMove(1)">›</button>
+
+    <div class="bedsheet-dots">
+      <span class="bedsheet-dot active" onclick="bedsheetGoTo(0)"></span>
+      <span class="bedsheet-dot" onclick="bedsheetGoTo(1)"></span>
+      <span class="bedsheet-dot" onclick="bedsheetGoTo(2)"></span>
+      <span class="bedsheet-dot" onclick="bedsheetGoTo(3)"></span>
+      <span class="bedsheet-dot" onclick="bedsheetGoTo(4)"></span>
+    </div>
+
+  </div>
+
+  <div class="card-body">
+
+    <div class="tag">Bedsheets</div>
+
+    <h3>✨ Premium Double Bed Pure Cotton Bedsheet ✨</h3>
+
+    <div class="price">
+      Rs. 2,500
+    </div>
+
+    <p>
+      Give your bedroom a fresh and elegant look with our beautiful
+      <b>Pure Cotton Double Bed Bedsheets</b>. 🌸💕
+    </p>
+
+    <p>
+      🛏️ King Size Bed<br>
+      🌿 100% Pure Cotton<br>
+      ✨ Soft, Comfortable & Breathable<br>
+      💎 Premium Quality & Durable<br>
+      🌸 Beautiful & Elegant Designs<br>
+      😴 Perfect for Everyday Use
+    </p>
+
+    <p>
+      🎨 Available in Multiple Beautiful Designs & Colors
+    </p>
+
+    <button class="cart-add"
+      onclick="addToCart('Premium Double Bed Pure Cotton Bedsheet',2500)">
       🛒 Add to Cart
     </button>
 
@@ -1291,6 +1445,72 @@ function orderOnInstagram(){
 renderCart();
 
 </script>
+<script> 
+let bedsheetCurrent = 0;
 
+function bedsheetGoTo(index) {
+  bedsheetCurrent = index;
+
+  const slides = document.getElementById("bedsheetSlides");
+
+  if (slides) {
+    slides.style.transform =
+      "translateX(-" + (index * 100) + "%)";
+  }
+
+  const dots = document.querySelectorAll(".bedsheet-dot");
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
+
+function bedsheetMove(direction) {
+  bedsheetCurrent += direction;
+
+  if (bedsheetCurrent < 0) {
+    bedsheetCurrent = 4;
+  }
+
+  if (bedsheetCurrent > 4) {
+    bedsheetCurrent = 0;
+  }
+
+  bedsheetGoTo(bedsheetCurrent);
+}
+
+let bedsheetStartX = 0;
+
+const bedsheetSlider =
+  document.querySelector(".bedsheet-slider");
+
+if (bedsheetSlider) {
+
+  bedsheetSlider.addEventListener("touchstart", function(e) {
+    bedsheetStartX =
+      e.changedTouches[0].screenX;
+  });
+
+  bedsheetSlider.addEventListener("touchend", function(e) {
+
+    const bedsheetEndX =
+      e.changedTouches[0].screenX;
+
+    const difference =
+      bedsheetStartX - bedsheetEndX;
+
+    if (Math.abs(difference) > 50) {
+
+      if (difference > 0) {
+        bedsheetMove(1);
+      } else {
+        bedsheetMove(-1);
+      }
+
+    }
+  });
+}
+</script>
 </body>
+  
     </html>

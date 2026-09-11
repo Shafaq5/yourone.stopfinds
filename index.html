@@ -904,16 +904,84 @@ onclick="addToCart('Premium Double Bed Pure Cotton Bedsheet',2500)">
 </div>
 </article>
 <!-- Single Bedsheet -->
-<div class="product-card">
-  <div class="bedsheet-slider">
-    <img id="singleBedsheetImage" src="single-bedsheet-1.jpg" alt="Single Bedsheet">
-    <button class="slider-btn prev" onclick="singleBedsheetMove(-1)">‹</button>
-    <button class="slider-btn next" onclick="singleBedsheetMove(1)">›</button>
+<div class="bedsheet-slider">
+
+  <div class="bedsheet-slides" id="singleBedsheetSlides">
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-1.jpg" alt="Premium Single Bedsheet Design 1">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-2.jpg" alt="Premium Single Bedsheet Design 2">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-3.jpg" alt="Premium Single Bedsheet Design 3">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-4.jpg" alt="Premium Single Bedsheet Design 4">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-5.jpg" alt="Premium Single Bedsheet Design 5">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-6.jpg" alt="Premium Single Bedsheet Design 6">
+    </div>
+
+    <div class="bedsheet-slide">
+      <img src="single-bedsheet-7.jpg" alt="Premium Single Bedsheet Design 7">
+    </div>
+
   </div>
 
-  <div class="product-info">
-    <h3>Premium Single Bed Pure Cotton Bedsheet</h3>
-    <p class="price">Rs. 1,500</p>
+  <button class="bedsheet-prev" onclick="singleBedsheetMove(-1)">‹</button>
+  <button class="bedsheet-next" onclick="singleBedsheetMove(1)">›</button>
+
+  <div class="bedsheet-dots">
+
+    <span class="bedsheet-dot active" onclick="singleBedsheetGoTo(0)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(1)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(2)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(3)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(4)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(5)"></span>
+    <span class="bedsheet-dot" onclick="singleBedsheetGoTo(6)"></span>
+
+  </div>
+
+</div>
+
+<div class="card-body">
+
+  <div class="tag">Bedsheets</div>
+
+  <h3>✨ Premium Single Bed Pure Cotton Bedsheet ✨</h3>
+
+  <div class="price">
+    Rs. 1,500
+  </div>
+
+  <p>
+    Give your bedroom a fresh and elegant look with our beautiful
+    <b>Pure Cotton Single Bed Bedsheets</b>. 🌸💕
+  </p>
+
+  <p>
+    🛏️ Single Bed Size<br>
+    🌿 100% Pure Cotton<br>
+    ✨ Soft, Comfortable & Breathable<br>
+    💎 Premium Quality & Durable<br>
+    🌸 Beautiful & Elegant Designs<br>
+    😴 Perfect for Everyday Use
+  </p>
+
+  <p>
+    🎨 Available in Multiple Beautiful Designs & Colors
+  </p>
     <button class="cart-add"
       onclick="addToCart('Premium Single Bed Pure Cotton Bedsheet', 1500, 'single-bedsheet-1.jpg')">
       Add to Cart

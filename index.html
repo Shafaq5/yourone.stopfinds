@@ -1508,29 +1508,57 @@ bedsheetMove(-1);
 
 }
 
-</script>
-  <script>
-let singleBedsheetCurrent = 0;
 
-const singleBedsheetImages = [
-  "single-bedsheet-1.jpg",
-  "single-bedsheet-2.jpg",
-  "single-bedsheet-3.jpg",
-  "single-bedsheet-4.jpg",
-  "single-bedsheet-5.jpg",
-  "single-bedsheet-6.jpg",
-  "single-bedsheet-7.jpg"
-];
+  </script>
+<script>
+let singleBedsheetIndex = 0;
+
+function singleBedsheetUpdate() {
+  const slides = document.getElementById("singleBedsheetSlides");
+  const dots = document.querySelectorAll(
+    "#singleBedsheetSlides ~ .bedsheet-dots .bedsheet-dot"
+  );
+
+  if (!slides) return;
+
+  slides.style.transform =
+    "translateX(-" + (singleBedsheetIndex * 100) + "%)";
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === singleBedsheetIndex);
+  });
+}
 
 function singleBedsheetMove(direction) {
-  singleBedsheetCurrent =
-    (singleBedsheetCurrent + direction + singleBedsheetImages.length) %
-    singleBedsheetImages.length;
+  const totalSlides = document.querySelectorAll(
+    "#singleBedsheetSlides .bedsheet-slide"
+  ).length;
 
-  document.getElementById("singleBedsheetImage").src =
-    singleBedsheetImages[singleBedsheetCurrent];
+  if (totalSlides === 0) return;
+
+  singleBedsheetIndex += direction;
+
+  if (singleBedsheetIndex >= totalSlides) {
+    singleBedsheetIndex = 0;
+  }
+
+  if (singleBedsheetIndex < 0) {
+    singleBedsheetIndex = totalSlides - 1;
+  }
+
+  singleBedsheetUpdate();
 }
-  </script>
 
+function singleBedsheetGoTo(index) {
+  const totalSlides = document.querySelectorAll(
+    "#singleBedsheetSlides .bedsheet-slide"
+  ).length;
+
+  if (index < 0 || index >= totalSlides) return;
+
+  singleBedsheetIndex = index;
+  singleBedsheetUpdate();
+}
+</script>
 </body>
 </html>

@@ -4,1513 +4,1220 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Your One-Stop Finds | Jewelry • Bags • Accessories & More</title>
-
-<meta name="description" content="Your One-Stop Finds — jewelry, bags, beauty, accessories and more. Finding the best things, just for you.">
+<title>YOURONE.STOPFINDS</title>
 
 <style>
-:root{
-  --pink:#d86b87;
-  --dark:#282329;
-  --cream:#fff8f5;
-  --gold:#b88a45;
-  --soft:#f8e6ea;
-}
 
-*{box-sizing:border-box}
+/* =====================================================
+   RESET
+===================================================== */
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--dark);
-  background:var(--cream)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-a{text-decoration:none;color:inherit}
 
-.top{
-  background:#282329;
-  color:white;
-  text-align:center;
-  padding:9px;
-  font-size:13px;
-  letter-spacing:.5px
+html {
+    scroll-behavior: smooth;
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(255,248,245,.96);
-  backdrop-filter:blur(10px);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 6%;
-  border-bottom:1px solid #f0dfe2
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #171717;
+    line-height: 1.5;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:800;
-  letter-spacing:1px
-}
 
-.logo img{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  object-fit:cover
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
 }
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 68px;
+    padding: 10px 18px;
 
-.links{
-  display:flex;
-  gap:24px;
-  align-items:center;
-  font-size:14px;
-  font-weight:600
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.links a:hover{color:var(--pink)}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-.cart-button{
-  border:none;
-  background:var(--pink);
-  color:white;
-  padding:11px 17px;
-  border-radius:25px;
-  font-weight:700;
-  cursor:pointer;
-  font-size:14px
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
-.cart-button:hover{
-  opacity:.9
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-.hero{
-  padding:65px 6% 50px;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:40px;
-  align-items:center;
-  background:linear-gradient(135deg,#fff8f5,#f7e2e7)
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-.hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(40px,6vw,70px);
-  line-height:1.02;
-  margin:10px 0
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
 }
+
+.cart-button {
+    background: white;
+    color: #111;
+    border: none;
+    border-radius: 25px;
+    padding: 9px 13px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+   NO HERO IMAGE REQUIRED
+===================================================== */
+
+.hero {
+    min-height: 430px;
+    padding: 70px 20px;
 
-.hero h1 span{color:var(--pink)}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.hero p{
-  font-size:18px;
-  line-height:1.7;
-  max-width:580px;
-  color:#665d62
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #3a3a3a 0%,
+            #181818 45%,
+            #050505 100%
+        );
+
+    color: white;
 }
 
-.btn{
-  display:inline-block;
-  background:var(--pink);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:30px;
-  font-weight:700;
-  margin:10px 8px 0 0
+.hero-content {
+    max-width: 700px;
 }
 
-.btn.alt{
-  background:#fff;
-  color:var(--dark);
-  border:1px solid #e6cdd3
+.hero-small {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ddd;
 }
 
-.hero-card{
-  background:#fff;
-  border-radius:28px;
-  padding:15px;
-  box-shadow:0 20px 55px rgba(55,35,42,.12)
+.hero h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
 }
+
+.hero p {
+    font-size: 13px;
+    max-width: 570px;
+    margin: auto;
+    color: #ddd;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
 
-.hero-card img{
-  width:100%;
-  height:430px;
-  object-fit:cover;
-  border-radius:20px
+    padding: 12px 25px;
+
+    background: white;
+    color: #111;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-section{padding:65px 6%}
 
-.heading{
-  text-align:center;
-  margin-bottom:34px
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+    padding: 55px 18px;
 }
 
-.heading h2{
-  font-family:Georgia,serif;
-  font-size:38px;
-  margin:0 0 8px
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 32px;
+    text-align: center;
 }
 
-.heading p{color:#776e73}
+.section-tag {
+    color: #777;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px
+.section-heading h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-bottom: 8px;
 }
 
-.card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 8px 30px rgba(50,30,40,.08);
-  border:1px solid #f1e5e7
+.section-heading p {
+    color: #777;
+    font-size: 12px;
 }
+
 
-.card img{
-  width:100%;
-  height:260px;
-  object-fit:cover
+/* =====================================================
+   PRODUCT GRID
+   2 PRODUCTS SIDE BY SIDE
+===================================================== */
+
+.grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
 }
+
 
-.card-body{padding:18px}
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
 
-.tag{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  color:var(--pink);
-  font-weight:700
+.card {
+    background: white;
+    border-radius: 13px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+
+    transition: 0.3s ease;
 }
 
-.card h3{
-  margin:7px 0;
-  font-size:20px
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-.card p{
-  font-size:14px;
-  line-height:1.6;
-  color:#71686d
+.card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
 }
 
-.price{
-  font-size:20px;
-  font-weight:800;
-  color:var(--dark);
-  margin:14px 0
+.card-body {
+    padding: 14px 15px 16px;
 }
 
-.cart-add{
-  width:100%;
-  border:none;
-  background:var(--pink);
-  color:white;
-  padding:13px;
-  border-radius:25px;
-  font-weight:700;
-  cursor:pointer;
-  font-size:15px
+.card-tag {
+    font-size: 9px;
+    color: #777;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
 }
 
-.cart-add:hover{
-  opacity:.9
+.card h3 {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 6px;
 }
 
-.shop{
-  background:var(--soft);
-  text-align:center
+.card p {
+    font-size: 12px;
+    color: #6c6c6c;
+    line-height: 1.5;
+    min-height: 55px;
 }
 
-.shop-box{
-  max-width:850px;
-  margin:auto;
-  background:#fff;
-  padding:38px;
-  border-radius:28px
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
 }
 
-.shop-box h2{
-  font-family:Georgia,serif;
-  font-size:38px;
-  margin:0 0 12px
+.old-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 6px;
 }
+
+.sale-price {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cart-add {
+    width: 100%;
 
-.about{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:40px;
-  align-items:center
+    border: none;
+    border-radius: 7px;
+
+    background: #111;
+    color: white;
+
+    padding: 11px 10px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
-.about img{
-  width:100%;
-  max-width:360px;
-  border-radius:50%;
-  display:block;
-  margin:auto
+.cart-add:hover {
+    background: #333;
 }
 
-.about h2{
-  font-family:Georgia,serif;
-  font-size:40px
+
+/* =====================================================
+   SALE BADGE
+===================================================== */
+
+.image-wrapper {
+    position: relative;
 }
+
+.sale-badge {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+
+    background: #e9004f;
+    color: white;
+
+    padding: 7px 17px;
+
+    border-radius: 25px;
 
-.about p{
-  line-height:1.8;
-  color:#6d6469
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:25px
+
+/* =====================================================
+   BEDSHEET SLIDER
+===================================================== */
+
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
 }
 
-.feature{
-  background:#fff;
-  border-radius:18px;
-  padding:20px;
-  text-align:center
+.slider-track {
+    display: flex;
+    transition: transform 0.45s ease;
 }
 
-.feature b{
-  display:block;
-  margin-bottom:6px
+.slide {
+    min-width: 100%;
+    position: relative;
 }
 
-footer{
-  background:#282329;
-  color:#fff;
-  text-align:center;
-  padding:35px 6%
+.slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
 }
+
+
+/* =====================================================
+   SLIDER BUTTONS
+===================================================== */
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.92);
+    color: #111;
+
+    cursor: pointer;
 
-footer img{
-  width:60px;
-  border-radius:50%;
-  margin-bottom:10px
+    font-size: 23px;
+    line-height: 30px;
+
+    z-index: 10;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-footer p{
-  color:#d9cfd2;
-  font-size:14px
+.slider-prev {
+    left: 9px;
 }
 
-/* CART */
-.cart-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.45);
-  z-index:99;
-  display:none
+.slider-next {
+    right: 9px;
 }
+
+
+/* =====================================================
+   SLIDER DOTS
+===================================================== */
+
+.slider-dots {
+    position: absolute;
 
-.cart-overlay.show{display:block}
+    left: 50%;
+    bottom: 10px;
 
-.cart-panel{
-  position:fixed;
-  top:0;
-  right:-430px;
-  width:400px;
-  max-width:92%;
-  height:100vh;
-  background:white;
-  z-index:100;
-  box-shadow:-10px 0 40px rgba(0,0,0,.2);
-  transition:right .3s ease;
-  display:flex;
-  flex-direction:column
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 5px;
+
+    z-index: 20;
 }
+
+.slider-dot {
+    width: 7px;
+    height: 7px;
 
-.cart-panel.open{right:0}
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.8);
+
+    cursor: pointer;
+}
 
-.cart-header{
-  padding:20px;
-  border-bottom:1px solid #eee;
-  display:flex;
-  justify-content:space-between;
-  align-items:center
+.slider-dot.active {
+    background: #111;
 }
 
-.cart-header h2{
-  margin:0;
-  font-family:Georgia,serif
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    background: #f1f1f1;
 }
 
-.close-cart{
-  border:none;
-  background:#f5e5e9;
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:18px
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
 }
 
-.cart-items{
-  flex:1;
-  overflow-y:auto;
-  padding:15px
+.about-box h2 {
+    font-size: 29px;
+    margin-bottom: 12px;
 }
 
-.empty-cart{
-  text-align:center;
-  padding:50px 20px;
-  color:#777
+.about-box p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #666;
 }
 
-.cart-item{
-  border-bottom:1px solid #eee;
-  padding:15px 0
+
+/* =====================================================
+   ORDER SECTION
+===================================================== */
+
+.order-section {
+    text-align: center;
+    background: #111;
+    color: white;
 }
 
-.cart-item-name{
-  font-weight:700;
-  margin-bottom:6px
+.order-section h2 {
+    font-size: 29px;
+    margin-bottom: 8px;
 }
 
-.cart-item-price{
-  color:var(--pink);
-  font-weight:700
+.order-section p {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 20px;
 }
+
+.instagram-btn {
+    display: inline-block;
 
-.quantity{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-top:10px
+    background: white;
+    color: #111;
+
+    padding: 12px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
 }
+
 
-.quantity button{
-  border:none;
-  background:#f5e5e9;
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:16px;
-  font-weight:bold
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #080808;
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 20px 15px;
+
+    font-size: 10px;
 }
 
-.remove{
-  border:none;
-  background:none;
-  color:#b44;
-  cursor:pointer;
-  margin-left:auto
+footer strong {
+    color: white;
 }
+
 
-.cart-footer{
-  padding:20px;
-  border-top:1px solid #eee;
-  background:#fff
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+
+    z-index: 2000;
 }
 
-.cart-total{
-  display:flex;
-  justify-content:space-between;
-  font-size:20px;
-  font-weight:800;
-  margin-bottom:15px
+.cart-overlay.active {
+    display: block;
 }
+
+.cart-panel {
+    position: fixed;
+
+    top: 0;
+    right: -420px;
 
-.checkout{
-  width:100%;
-  border:none;
-  background:var(--pink);
-  color:white;
-  padding:15px;
-  border-radius:28px;
-  font-size:16px;
-  font-weight:800;
-  cursor:pointer
+    width: min(390px, 92vw);
+    height: 100vh;
+
+    background: white;
+
+    z-index: 2100;
+
+    transition: right 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.checkout:hover{
-  opacity:.9
+.cart-panel.active {
+    right: 0;
 }
+
+.cart-header {
+    padding: 17px;
 
-.clear-cart{
-  width:100%;
-  border:none;
-  background:#f5e5e9;
-  color:var(--dark);
-  padding:11px;
-  border-radius:25px;
-  margin-top:8px;
-  cursor:pointer;
-  font-weight:700
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee;
 }
 
-@media(max-width:900px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .hero{grid-template-columns:1fr}
-  .about{grid-template-columns:1fr}
-  .hero-card img{height:330px}
+.cart-header h2 {
+    font-size: 19px;
 }
 
-@media(max-width:600px){
-  .links{display:none}
+.close-cart {
+    border: none;
+    background: none;
 
-  .grid,
-  .features{
-    grid-template-columns:1fr
-  }
+    font-size: 27px;
 
-  .hero{
-    padding-top:40px
-  }
+    cursor: pointer;
+}
 
-  section{
-    padding:45px 5%
-  }
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
 
-  .card img{
-    height:300px
-  }
+    padding: 15px;
+}
 
-  .logo span{
-    font-size:13px
-  }
+.cart-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
 
-  .cart-panel{
-    width:100%;
-    max-width:100%
-  }
+.cart-item h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
 }
-  /* BEDSheet Slider */
 
-.bedsheet-slider{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  background:#fff;
+.cart-item-price {
+    font-size: 11px;
+    color: #666;
 }
 
-.bedsheet-slides{
-  display:flex;
-  transition:transform .4s ease;
-  touch-action:pan-y;
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
 }
+
+.qty-btn {
+    width: 26px;
+    height: 26px;
 
-.bedsheet-slide{
-  min-width:100%;
-  flex-shrink:0;
+    border: 1px solid #ddd;
+    background: white;
+
+    cursor: pointer;
+    border-radius: 5px;
 }
+
+.remove-btn {
+    border: none;
+    background: none;
+
+    color: #e00045;
+
+    font-size: 10px;
+
+    cursor: pointer;
 
-.bedsheet-slide img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  display:block;
+    margin-left: auto;
 }
 
-.bedsheet-prev,
-.bedsheet-next{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:40px;
-  height:40px;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.85);
-  font-size:24px;
-  cursor:pointer;
-  z-index:2;
+.cart-footer {
+    padding: 16px;
+    border-top: 1px solid #eee;
 }
 
-.bedsheet-prev{
-  left:10px;
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
 }
+
+.checkout-btn {
+    width: 100%;
+
+    border: none;
+
+    background: #111;
+    color: white;
+
+    padding: 13px;
 
-.bedsheet-next{
-  right:10px;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: bold;
 }
+
+.clear-cart {
+    width: 100%;
+
+    margin-top: 7px;
+
+    border: 1px solid #ddd;
+    background: white;
 
-.bedsheet-dots{
-  position:absolute;
-  bottom:12px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:7px;
+    padding: 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 10px;
 }
+
+.empty-cart {
+    text-align: center;
+
+    padding: 50px 15px;
 
-.bedsheet-dot{
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:rgba(255,255,255,.7);
-  cursor:pointer;
+    color: #888;
+
+    font-size: 12px;
 }
+
+
+/* =====================================================
+   MOBILE
+   STILL 2 PRODUCTS AT A TIME
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 9px 10px;
+    }
+
+    .logo {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-links {
+        gap: 7px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .cart-button {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+
 
-.bedsheet-dot.active{
-  background:var(--pink);
+    /* HERO */
+
+    .hero {
+        min-height: 370px;
+        padding: 50px 15px;
+    }
+
+    .hero-small {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 11px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 43px 8px;
+    }
+
+    .section-heading {
+        margin-bottom: 23px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .section-heading p {
+        font-size: 10px;
+    }
+
+
+    /* 2 PRODUCTS */
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+
+    /* CARDS */
+
+    .card {
+        border-radius: 9px;
+    }
+
+    .card-image,
+    .slide img {
+        height: 175px;
+    }
+
+    .card-body {
+        padding: 9px;
+    }
+
+    .card-tag {
+        font-size: 7px;
+        letter-spacing: 0.8px;
+    }
+
+    .card h3 {
+        font-size: 13px;
+    }
+
+    .card p {
+        font-size: 9.5px;
+        line-height: 1.4;
+        min-height: 55px;
+    }
+
+    .price {
+        font-size: 13px;
+        margin: 7px 0;
+    }
+
+    .old-price {
+        font-size: 8px;
+    }
+
+    .sale-price {
+        font-size: 13px;
+    }
+
+    .cart-add {
+        padding: 9px 3px;
+        font-size: 9px;
+    }
+
+
+    /* SLIDER */
+
+    .slider-btn {
+        width: 27px;
+        height: 27px;
+        font-size: 17px;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .sale-badge {
+        padding: 5px 9px;
+        font-size: 8px;
+    }
+
+
+    /* ABOUT */
+
+    .about-box h2,
+    .order-section h2 {
+        font-size: 23px;
+    }
+
 }
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
 
-@media(max-width:600px){
-  .bedsheet-slide img{
-    height:300px;
-  }
+    .nav-links a {
+        display: none;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .card-image,
+    .slide img {
+        height: 155px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 9px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<div class="top">
-  ✨ New finds weekly • DM us on Instagram to order • Pakistan
-</div>
 
-<nav>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <a class="logo" href="#home">
-    <img src="logo.png" alt="Your One-Stop Finds logo">
-    <span>YOURONE.STOPFINDS</span>
-  </a>
+<header>
 
-  <div class="links">
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#order">How to Order</a>
+    <div class="navbar">
 
-    <a href="https://www.instagram.com/yourone.stopfinds/" target="_blank">
-      Instagram ↗
-    </a>
-  </div>
+        <div class="logo">
 
-  <button class="cart-button" onclick="openCart()">
-    🛒 Cart (<span id="cartCount">0</span>)
-  </button>
+            <img
+                src="logo.png"
+                alt="YOURONE.STOPFINDS Logo"
+            >
 
-</nav>
+            YOURONE.STOPFINDS
 
-<main id="home">
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#products">
+                Shop
+            </a>
+
+            <a href="#bedsheets">
+                Bedsheets
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <button
+                class="cart-button"
+                onclick="openCart()"
+            >
+                🛒 Cart
+                (<span id="cartCount">0</span>)
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-  <div>
+    <div class="hero-content">
 
-    <div class="tag">
-      YOUR ONE-STOP SHOPPING DESTINATION
+        <div class="hero-small">
+            Curated Finds • Everyday Style
+        </div>
+
+        <h1>
+            YOUR ONE STOP FINDS
+        </h1>
+
+        <p>
+            Little things, lovely details and beautiful
+            finds — carefully picked to add a special
+            touch to your everyday life.
+        </p>
+
+        <a
+            href="#products"
+            class="hero-btn"
+        >
+            Explore Collection
+        </a>
+
     </div>
-
-    <h1>
-      We find the <span>best things,</span> just for you. ✨
-    </h1>
-
-    <p>
-      Discover cute, stylish and useful finds — from jewelry and mini bags
-      to beauty products, bottles and everyday accessories.
-    </p>
-
-    <a class="btn" href="#products">
-      Shop Our Finds
-    </a>
-
-    <a class="btn alt"
-       href="https://www.instagram.com/yourone.stopfinds/"
-       target="_blank">
-      DM on Instagram
-    </a>
-
-  </div>
-
-  <div class="hero-card">
-    <img src="mini-bags.jpg" alt="Mini bags">
-  </div>
 
 </section>
 
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
 <section id="products">
 
-  <div class="heading">
-    <h2>Our Latest Finds</h2>
-    <p>Little luxuries and useful things we think you'll love.</p>
-  </div>
+    <div class="section-heading">
 
-  <div class="grid">
-
-
-    <!-- PRODUCT 1 -->
-    <article class="card">
-
-      <img src="mini-bags.jpg"
-           alt="Mini Forever Young bags">
-
-      <div class="card-body">
-
-        <div class="tag">Bags</div>
-
-        <h3>Mini Forever Young Bags</h3>
-
-        <p>
-          Compact, cute and perfect for everyday essentials.
-          Available in beautiful pastel shades.
-        </p>
-
-        <div class="price">
-          Rs. 1,200
+        <div class="section-tag">
+            Our Collection
         </div>
 
-        <button class="cart-add"
-          onclick="addToCart('Mini Forever Young Bags',1200)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 2 -->
-    <article class="card">
-
-      <img src="lipstick.jpg"
-           alt="18-color capsule lipstick">
-
-      <div class="card-body">
-
-        <div class="tag">Beauty</div>
-
-        <h3>18-Color Capsule Lipstick</h3>
+        <h2>
+            Something You'll Love
+        </h2>
 
         <p>
-          18 silky-smooth matte shades, from everyday tones
-          to bold statement colors.
+            Pretty, practical and stylish finds,
+            all in one place.
         </p>
-
-        <div class="price">
-          Rs. 1,800
-        </div>
-
-        <button class="cart-add"
-          onclick="addToCart('18-Color Capsule Lipstick',1800)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 3 -->
-    <article class="card">
-
-      <img src="water-bottles.jpg"
-           alt="Ice Cream water bottles">
-
-      <div class="card-body">
-
-        <div class="tag">Lifestyle</div>
-
-        <h3>Ice Cream Water Bottles</h3>
-
-        <p>
-          Fun, colorful bottles with a built-in straw
-          and easy-grip handle.
-        </p>
-
-        <div class="price">
-          Rs. 1,800
-        </div>
-
-        <button class="cart-add"
-          onclick="addToCart('Ice Cream Water Bottles',1800)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 4 -->
-    <article class="card">
-
-      <img src="watch-bracelet.jpg"
-           alt="Purple gemstone watch and bracelet set">
-
-      <div class="card-body">
-
-        <div class="tag">Jewelry</div>
-
-        <h3>Purple Gemstone Watch Set</h3>
-
-        <p>
-          A statement watch paired with a delicate matching
-          bracelet for an elegant look.
-        </p>
-
-        <div class="price">
-          Rs. 2,200
-        </div>
-
-        <button class="cart-add"
-          onclick="addToCart('Purple Gemstone Watch Set',2200)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 5 -->
-    <article class="card">
-
-      <img src="bracelet-set.jpg"
-           alt="Elegant Gold-Plated Bracelet Set">
-
-      <div class="card-body">
-
-        <div class="tag">Jewelry</div>
-
-        <h3>Elegant Bracelet Set</h3>
-
-        <p>
-          Add a touch of elegance to your everyday look
-          with our beautiful gold-plated bracelet set. 💫
-        </p>
-
-        <p>
-          💎 Stylish & elegant design<br>
-          ✨ Sparkling crystal details<br>
-          🌸 Perfect for everyday & special occasions<br>
-          🎁 Perfect for gifting
-        </p>
-
-        <div class="price">
-          Rs. 500 each
-        </div>
-
-        <button class="cart-add"
-          onclick="addToCart('Elegant Bracelet Set',500)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 6 -->
-    <article class="card">
-
-      <img src="royal-crystal-jewelry-set.jpg"
-           alt="Royal Crystal Bridal Jewelry Set">
-
-      <div class="card-body">
-
-        <div class="tag">Jewelry</div>
-
-        <h3>Royal Crystal Bridal Jewelry Set</h3>
-
-        <p>
-          Elegant and sparkling jewelry set designed to add
-          a beautiful royal touch to your special look. ✨
-        </p>
-
-        <p>
-          💎 Elegant crystal design<br>
-          ✨ Beautiful sparkling details<br>
-          👑 Royal & luxurious look<br>
-          🌸 Perfect for weddings & special occasions<br>
-          🎁 Perfect for gifting
-        </p>
-
-        <div class="price">
-          Rs. 1,600
-        </div>
-
-        <button class="cart-add"
-          onclick="addToCart('Royal Crystal Bridal Jewelry Set',1600)">
-          🛒 Add to Cart
-        </button>
-
-      </div>
-
-    </article>
-
-<!-- PRODUCT 7 -->
-<article class="card">
-
-  <img src="zircon-locket-set.jpg"
-       alt="Zircon Locket Set">
-
-  <div class="card-body">
-
-    <div class="tag">Jewelry</div>
-
-    <h3>Zircon Locket Set</h3>
-
-    <p>
-      Elegant zircon locket set with beautiful sparkling details,
-      perfect for adding a graceful touch to any look. ✨
-    </p>
-
-    <p>
-      💎 Beautiful zircon stone design<br>
-      ✨ Sparkling & elegant look<br>
-      🌸 Perfect for everyday & special occasions<br>
-      🎁 Perfect for gifting
-    </p>
-
-    <div class="price">
-      Rs. 1,250
-    </div>
-
-    <button class="cart-add"
-      onclick="addToCart('Zircon Locket Set',1250)">
-      🛒 Add to Cart
-    </button>
-
-  </div>
-
-</article>
-    <!-- BOVIS STAR BUTTON WALLET -->
-<article class="card">
-
-  <img src="bovis-wallet.jpg"
-       alt="Bovis Star Button High Quality Wallet">
-
-  <div class="card-body">
-
-    <div class="tag">Accessories</div>
-
-    <h3>Bovis Star Button Wallet + Cardholder</h3>
-
-    <p>
-      Stylish, practical and perfect for keeping your cards,
-      cash and everyday essentials organized. ✨
-    </p>
-
-    <p>
-      ⭐ Star Button Design<br>
-      🔐 Top Zipper Closure<br>
-      💳 Matching Cardholder Included<br>
-      👜 Extra Hidden Pockets<br>
-      ✨ Compact & Practical<br>
-      🎁 Perfect for Gifting
-    </p>
-
-    <p>
-      🎨 <b>Available Colors:</b><br>
-      🖤 Black<br>
-      🤎 Brown
-    </p>
-
-    <div class="price">
-      Rs. 1,200
-    </div>
-
-    <button class="cart-add"
-      onclick="addToCart('Bovis Star Button Wallet + Cardholder',1200)">
-      🛒 Add to Cart
-    </button>
-
-  </div>
-
-</article>
-    <!-- PREMIUM BEDSHEET -->
-<article class="card">
-
-  <div class="bedsheet-slider">
-
-    <div class="bedsheet-slides" id="bedsheetSlides">
-
-      <div class="bedsheet-slide">
-        <img src="bedsheet-1.jpg" alt="Premium Bedsheet Design 1">
-      </div>
-
-      <div class="bedsheet-slide">
-        <img src="bedsheet-2.jpg" alt="Premium Bedsheet Design 2">
-      </div>
-
-      <div class="bedsheet-slide">
-        <img src="bedsheet-3.jpg" alt="Premium Bedsheet Design 3">
-      </div>
-
-      <div class="bedsheet-slide">
-        <img src="bedsheet-4.jpg" alt="Premium Bedsheet Design 4">
-      </div>
-
-      <div class="bedsheet-slide">
-        <img src="bedsheet-5.jpg" alt="Premium Bedsheet Design 5">
-      </div>
 
     </div>
 
-    <button class="bedsheet-prev" onclick="bedsheetMove(-1)">‹</button>
-    <button class="bedsheet-next" onclick="bedsheetMove(1)">›</button>
 
-    <div class="bedsheet-dots">
-      <span class="bedsheet-dot active" onclick="bedsheetGoTo(0)"></span>
-      <span class="bedsheet-dot" onclick="bedsheetGoTo(1)"></span>
-      <span class="bedsheet-dot" onclick="bedsheetGoTo(2)"></span>
-      <span class="bedsheet-dot" onclick="bedsheetGoTo(3)"></span>
-      <span class="bedsheet-dot" onclick="bedsheetGoTo(4)"></span>
-    </div>
+    <div class="grid">
 
-  </div>
 
-  <div class="card-body">
+        <!-- =================================================
+             PRODUCT 1
+        ================================================== -->
 
-    <div class="tag">Bedsheets</div>
+        <div class="card">
 
-    <h3>✨ Premium Double Bed Pure Cotton Bedsheet ✨</h3>
+            <img
+                src="mini-bags.jpg"
+                alt="Mini Bags"
+                class="card-image"
+                loading="lazy"
+            >
 
-    <div class="price">
-      Rs. 2,500
-    </div>
+            <div class="card-body">
 
-    <p>
-      Give your bedroom a fresh and elegant look with our beautiful
-      <b>Pure Cotton Double Bed Bedsheets</b>. 🌸💕
-    </p>
+                <div class="card-tag">
+                    Fashion Find
+                </div>
 
-    <p>
-      🛏️ King Size Bed<br>
-      🌿 100% Pure Cotton<br>
-      ✨ Soft, Comfortable & Breathable<br>
-      💎 Premium Quality & Durable<br>
-      🌸 Beautiful & Elegant Designs<br>
-      😴 Perfect for Everyday Use
-    </p>
+                <h3>
+                    Chic Mini Bags
+                </h3>
 
-    <p>
-      🎨 Available in Multiple Beautiful Designs & Colors
-    </p>
+                <p>
+                    Small, stylish and easy to carry —
+                    the perfect little finishing touch
+                    for your everyday look.
+                </p>
 
-    <button class="cart-add"
-      onclick="addToCart('Premium Double Bed Pure Cotton Bedsheet',2500)">
-      🛒 Add to Cart
-    </button>
+                <div class="price">
+                    Rs. 1,499
+                </div>
 
-  </div>
+                <button
+                    class="cart-add"
+                    onclick="addToCart('Chic Mini Bags',1499)"
+                >
+                    Add to Cart
+                </button>
 
-</article>
-  </div>
-
-</section>
-
-
-<section id="about" class="about">
-
-  <div>
-    <img src="logo.png" alt="Your One-Stop Finds">
-  </div>
-
-  <div>
-
-    <div class="tag">ABOUT US</div>
-
-    <h2>Curated with love. 💕</h2>
-
-    <p>
-      Your One-Stop Finds is a growing online shop for people who love
-      discovering beautiful, practical and trending products without
-      searching everywhere.
-    </p>
-
-    <p>
-      <b>
-        Jewelry • Bags • Beauty • Accessories • Lifestyle & More
-      </b>
-    </p>
-
-    <div class="features">
-
-      <div class="feature">
-        ✨
-        <b>Curated Finds</b>
-        Products we think you'll love.
-      </div>
-
-      <div class="feature">
-        🛍️
-        <b>New Finds</b>
-        Fresh products regularly.
-      </div>
-
-      <div class="feature">
-        💌
-        <b>Easy Ordering</b>
-        Simply add to cart and order.
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="order" class="shop">
-
-  <div class="shop-box">
-
-    <div class="tag">
-      READY TO SHOP?
-    </div>
-
-    <h2>
-      Find your next favorite. 🛍️
-    </h2>
-
-    <p>
-      Add your favorite products to the cart. When you're ready,
-      click "Order on Instagram" and send us your order details.
-    </p>
-
-    <a class="btn"
-       href="https://www.instagram.com/yourone.stopfinds/"
-       target="_blank">
-      Message @yourone.stopfinds
-    </a>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <img src="logo.png" alt="Logo">
-
-  <div>
-    <b>YOURONE.STOPFINDS</b>
-  </div>
-
-  <p>
-    Jewelry • Bags • Accessories & More
-  </p>
-
-  <p>
-    Finding the best things, just for you. 💕
-  </p>
-
-</footer>
-
-
-<!-- CART OVERLAY -->
-<div id="cartOverlay"
-     class="cart-overlay"
-     onclick="closeCart()">
-</div>
-
-
-<!-- CART PANEL -->
-<aside id="cartPanel"
-       class="cart-panel">
-
-  <div class="cart-header">
-
-    <h2>🛒 Your Cart</h2>
-
-    <button class="close-cart"
-            onclick="closeCart()">
-      ✕
-    </button>
-
-  </div>
-
-
-  <div id="cartItems"
-       class="cart-items">
-  </div>
-
-
-  <div class="cart-footer">
-
-    <div class="cart-total">
-
-      <span>Total</span>
-
-      <span>
-        Rs. <span id="cartTotal">0</span>
-      </span>
-
-    </div>
-
-    <button class="checkout"
-            onclick="orderOnInstagram()">
-      📩 Order on Instagram
-    </button>
-
-    <button class="clear-cart"
-            onclick="clearCart()">
-      Clear Cart
-    </button>
-
-  </div>
-
-</aside>
-
-
-<script>
-
-let cart = JSON.parse(
-  localStorage.getItem("yourOneStopFindsCart") || "[]"
-);
-
-
-/* ADD PRODUCT TO CART */
-function addToCart(name, price){
-
-  const existing = cart.find(
-    item => item.name === name
-  );
-
-  if(existing){
-
-    existing.quantity += 1;
-
-  }else{
-
-    cart.push({
-      name:name,
-      price:price,
-      quantity:1
-    });
-
-  }
-
-  saveCart();
-
-  openCart();
-}
-
-
-/* SAVE CART */
-function saveCart(){
-
-  localStorage.setItem(
-    "yourOneStopFindsCart",
-    JSON.stringify(cart)
-  );
-
-  renderCart();
-}
-
-
-/* SHOW CART */
-function renderCart(){
-
-  const cartItems =
-    document.getElementById("cartItems");
-
-  const cartCount =
-    document.getElementById("cartCount");
-
-  const cartTotal =
-    document.getElementById("cartTotal");
-
-
-  let totalItems = 0;
-  let totalPrice = 0;
-
-
-  cart.forEach(item => {
-
-    totalItems += item.quantity;
-
-    totalPrice +=
-      item.price * item.quantity;
-
-  });
-
-
-  cartCount.textContent = totalItems;
-
-  cartTotal.textContent =
-    totalPrice.toLocaleString();
-
-
-  if(cart.length === 0){
-
-    cartItems.innerHTML = `
-      <div class="empty-cart">
-        🛍️<br><br>
-        Your cart is empty.<br>
-        Add something you love!
-      </div>
-    `;
-
-    return;
-  }
-
-
-  cartItems.innerHTML =
-    cart.map((item,index) => `
-
-      <div class="cart-item">
-
-        <div class="cart-item-name">
-          ${item.name}
-        </div>
-
-        <div class="cart-item-price">
-          Rs. ${(item.price * item.quantity).toLocaleString()}
-        </div>
-
-        <div class="quantity">
-
-          <button onclick="changeQuantity(${index},-1)">
-            −
-          </button>
-
-          <strong>
-            ${item.quantity}
-          </strong>
-
-          <button onclick="changeQuantity(${index},1)">
-            +
-          </button>
-
-          <button class="remove"
-                  onclick="removeFromCart(${index})">
-            🗑️ Remove
-          </button>
+            </div>
 
         </div>
 
-      </div>
 
-    `).join("");
 
-}
+        <!-- =================================================
+             PRODUCT 2
+        ================================================== -->
 
+        <div class="card">
 
-/* CHANGE QUANTITY */
-function changeQuantity(index,change){
+            <img
+                src="lipstick.jpg"
+                alt="Lipstick"
+                class="card-image"
+                loading="lazy"
+            >
 
-  cart[index].quantity += change;
+            <div class="card-body">
 
-  if(cart[index].quantity <= 0){
+                <div class="card-tag">
+                    Beauty Pick
+                </div>
 
-    cart.splice(index,1);
+                <h3>
+                    Everyday Lip Colour
+                </h3>
 
-  }
+                <p>
+                    A simple beauty essential to give
+                    your everyday look that little
+                    extra confidence.
+                </p>
 
-  saveCart();
-}
+                <div class="price">
+                    Rs. 899
+                </div>
 
+                <button
+                    class="cart-add"
+                    onclick="addToCart('Everyday Lip Colour',899)"
+                >
+                    Add to Cart
+                </button>
 
-/* REMOVE PRODUCT */
-function removeFromCart(index){
+            </div>
 
-  cart.splice(index,1);
+        </div>
 
-  saveCart();
-}
 
 
-/* CLEAR CART */
-function clearCart(){
+        <!-- =================================================
+             PRODUCT 3
+        ================================================== -->
 
-  cart = [];
+        <div class="card">
 
-  saveCart();
-}
+            <img
+                src="water-bottles.jpg"
+                alt="Water Bottles"
+                class="card-image"
+                loading="lazy"
+            >
 
+            <div class="card-body">
 
-/* OPEN CART */
-function openCart(){
+                <div class="card-tag">
+                    Everyday Essential
+                </div>
 
-  document
-    .getElementById("cartPanel")
-    .classList.add("open");
+                <h3>
+                    Stylish Water Bottles
+                </h3>
 
-  document
-    .getElementById("cartOverlay")
-    .classList.add("show");
+                <p>
+                    A practical everyday companion
+                    for work, study, gym days and
+                    little adventures.
+                </p>
 
-}
+                <div class="price">
+                    Rs. 1,299
+                </div>
 
+                <button
+                    class="cart-add"
+                    onclick="addToCart('Stylish Water Bottles',1299)"
+                >
+                    Add to Cart
+                </button>
 
-/* CLOSE CART */
-function closeCart(){
+            </div>
 
-  document
-    .getElementById("cartPanel")
-    .classList.remove("open");
+        </div>
 
-  document
-    .getElementById("cartOverlay")
-    .classList.remove("show");
 
-}
 
+        <!-- =================================================
+             PRODUCT 4
+        ================================================== -->
 
-/* ORDER ON INSTAGRAM */
-function orderOnInstagram(){
+        <div class="card">
 
-  if(cart.length === 0){
+            <img
+                src="watch-bracelet.jpg"
+                alt="Watch Bracelet"
+                class="card-image"
+                loading="lazy"
+            >
 
-    alert(
-      "Your cart is empty. Please add a product first."
-    );
+            <div class="card-body">
 
-    return;
-  }
+                <div class="card-tag">
+                    Accessories
+                </div>
 
+                <h3>
+                    Watch & Bracelet Set
+                </h3>
 
-  let message =
-    "Hi @yourone.stopfinds! 👋%0A%0AI would like to order:%0A%0A";
+                <p>
+                    A polished little combination
+                    that adds effortless charm
+                    to your outfit.
+                </p>
 
+                <div class="price">
+                    Rs. 1,799
+                </div>
 
-  let total = 0;
+                <button
+                    class="cart-add"
+                    onclick="addToCart('Watch & Bracelet Set',1799)"
+                >
+                    Add to Cart
+                </button>
 
+            </div>
 
-  cart.forEach(item => {
+        </div>
 
-    const itemTotal =
-      item.price * item.quantity;
 
-    total += itemTotal;
 
-    message +=
-      "• " +
-      item.name +
-      " × " +
-      item.quantity +
-      " = Rs. " +
-      itemTotal.toLocaleString() +
-      "%0A";
+        <!-- =================================================
+             PRODUCT 5
+        ================================================== -->
 
-  });
+        <div class="card">
 
+            <img
+                src="bracelet-set.jpg"
+                alt="Bracelet Set"
+                class="card-image"
+                loading="lazy"
+            >
 
-  message +=
-    "%0A💰 Total: Rs. " +
-    total.toLocaleString();
+            <div class="card-body">
 
+                <div class="card-tag">
+                    Jewellery Edit
+                </div>
 
-  const plainMessage =
-    cart.map(item =>
-      item.name +
-      " × " +
-      item.quantity +
-      " = Rs. " +
-      (item.price * item.quantity).toLocaleString()
-    ).join("\n")
-    +
-    "\n\nTotal: Rs. " +
-    total.toLocaleString();
+                <h3>
+                    Pretty Bracelet Set
+                </h3>
 
+                <p>
+                    Delicate details for those days
+                    when your outfit needs one more
+                    beautiful touch.
+                </p>
 
-  if(navigator.clipboard){
-
-    navigator.clipboard
-      .writeText(
-        "Hi @yourone.stopfinds! 👋\n\n" +
-        "I would like to order:\n\n" +
-        plainMessage
-      )
-      .catch(() => {});
-
-  }
-
-
-  alert(
-    "Your order details have been copied! 📋\n\n" +
-    "Instagram will open next.\n" +
-    "Paste the details into your DM."
-  );
-
-
-  window.open(
-    "https://www.instagram.com/yourone.stopfinds/",
-    "_blank"
-  );
-
-}
-
-
-/* LOAD CART */
-renderCart();
-
-</script>
-<script> 
-let bedsheetCurrent = 0;
-
-function bedsheetGoTo(index) {
-  bedsheetCurrent = index;
-
-  const slides = document.getElementById("bedsheetSlides");
-
-  if (slides) {
-    slides.style.transform =
-      "translateX(-" + (index * 100) + "%)";
-  }
-
-  const dots = document.querySelectorAll(".bedsheet-dot");
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
-}
-
-function bedsheetMove(direction) {
-  bedsheetCurrent += direction;
-
-  if (bedsheetCurrent < 0) {
-    bedsheetCurrent = 4;
-  }
-
-  if (bedsheetCurrent > 4) {
-    bedsheetCurrent = 0;
-  }
-
-  bedsheetGoTo(bedsheetCurrent);
-}
-
-let bedsheetStartX = 0;
-
-const bedsheetSlider =
-  document.querySelector(".bedsheet-slider");
-
-if (bedsheetSlider) {
-
-  bedsheetSlider.addEventListener("touchstart", function(e) {
-    bedsheetStartX =
-      e.changedTouches[0].screenX;
-  });
-
-  bedsheetSlider.addEventListener("touchend", function(e) {
-
-    const bedsheetEndX =
-      e.changedTouches[0].screenX;
-
-    const difference =
-      bedsheetStartX - bedsheetEndX;
-
-    if (Math.abs(difference) > 50) {
-
-      if (difference > 0) {
-        bedsheetMove(1);
-      } else {
-        bedsheetMove(-1);
-      }
-
-    }
-  });
-}
-</script>
-</body>
-  
-    </html>
+                <div cla

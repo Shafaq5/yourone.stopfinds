@@ -479,6 +479,28 @@ background:var(--pink);
 height:300px;
 }
 }
+  /* Single Bedsheet - same size as other bedsheet */
+#singleBedsheetImage {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keep Single Bedsheet slider contained */
+.product-card .bedsheet-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+  #singleBedsheetImage {
+    height: 360px;
+    object-fit: cover;
+  }
+}
 </style>
 </head>
 <body>
